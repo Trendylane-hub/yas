@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Yas</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://i.postimg.cc/W3S3spts/IMG-8117.png') no-repeat center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+}
+
+/* Card */
+.card {
+  position: relative;
+  background: rgba(20,20,20,0.85);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 280px;
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  animation: fadeIn 1s ease;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Buttons */
+a {
+  display: block;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  background: #111;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: #5865F2;
+  box-shadow: 0 0 15px #5865F2;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Yas</h1>
+  <p>SKZ fan ✨ | Just vibing</p>
+
+  <a href="https://discord.com/users/1472699133826568405" target="_blank">💬 Discord</a>
+  <a href="https://www.roblox.com/users/4886061050/profile" target="_blank">🎮 Roblox</a>
+  <a href="#">🌐 More Links</a>
+</div>
+
+</body>
+</html>
