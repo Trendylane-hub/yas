@@ -34,7 +34,7 @@ body::before {
   backdrop-filter:blur(10px);
   box-shadow:0 0 25px rgba(0,0,0,0.5);
 }
-h1 { margin-bottom:5px; }
+h1 { margin-bottom:5px; } 
 p { font-size:14px; opacity:0.8; }
 a {
   display:block;
@@ -73,22 +73,15 @@ button:hover { background-color:#4752C4; }
   <a href="https://www.roblox.com/users/4886061050/profile" target="_blank">🎮 Roblox</a>
   <a href="https://www.tiktok.com/@skzaccounttxo?_r=1&_t=ZN-94p9yb8re34" target="_blank">🎵 TikTok</a>
 
-  <!-- Play Music Button -->
-  <button id="play-btn">▶ Play Music</button>
+  <!-- Music -->
+  <audio id="music" loop>
+    <source src="https://store-eu-par-4.gofile.io/download/web/de5fdfde-78ba-4aa7-b522-dc336a6ddcaf/I.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-  <!-- Hidden YouTube Music -->
-  <iframe id="yt-music" style="display:none;" width="0" height="0"
-    src="https://www.youtube.com/embed/n5B5q1Hwt_U?autoplay=1&loop=1&playlist=n5B5q1Hwt_U"
-    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!-- Play Button -->
+  <button onclick="document.getElementById('music').play(); this.style.display='none';">▶ Play Music</button>
 </div>
-
-<script>
-// Play music & hide button
-document.getElementById('play-btn').addEventListener('click', function() {
-  document.getElementById('yt-music').style.display = 'block';
-  this.style.display = 'none';
-});
-</script>
 
 </body>
 </html>
