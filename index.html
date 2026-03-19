@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: url('https://i.postimg.cc/W3S3spts/IMG-8117.png') no-repeat center/cover;
+  background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -37,7 +38,6 @@ body::before {
   color: white;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
-  animation: fadeIn 1s ease;
 }
 
 h1 {
@@ -49,7 +49,6 @@ p {
   opacity: 0.8;
 }
 
-/* Buttons */
 a {
   display: block;
   margin: 12px 0;
@@ -66,12 +65,6 @@ a:hover {
   box-shadow: 0 0 15px #5865F2;
   transform: scale(1.05);
 }
-
-/* Animation */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
 </style>
 
 </head>
@@ -86,8 +79,11 @@ a:hover {
   <a href="https://www.roblox.com/users/4886061050/profile" target="_blank">🎮 Roblox</a>
   <a href="https://www.tiktok.com/@skzaccounttxo?_r=1&_t=ZN-94p9yb8re34" target="_blank">🎵 TikTok</a>
 
-  <!-- Background Music: Girl in Hallucinations -->
-  <iframe width="0" height="0" src="https://www.youtube.com/embed/n5B5q1Hwt_U?autoplay=1&loop=1&playlist=n5B5q1Hwt_U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <!-- Background Music -->
+  <audio id="music" controls autoplay loop>
+    <source src="https://srv-file7.gofile.io/download/GqyM0t" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </div>
 
 </body>
