@@ -2,73 +2,65 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Yas</title>
-
+<title>Yas V-Card</title>
 <style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url('https://i.postimg.cc/W3S3spts/IMG-8117.png') no-repeat center/cover;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:url('https://i.postimg.cc/W3S3spts/IMG-8117.png') no-repeat center/cover;
+  background-size:cover;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-
 body::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  top: 0;
-  left: 0;
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  top:0;
+  left:0;
 }
-
 .card {
-  position: relative;
-  background: rgba(20,20,20,0.85);
-  padding: 25px;
-  border-radius: 20px;
-  text-align: center;
-  width: 280px;
-  color: white;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  position:relative;
+  background:rgba(20,20,20,0.85);
+  padding:25px;
+  border-radius:20px;
+  text-align:center;
+  width:300px;
+  color:white;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 25px rgba(0,0,0,0.5);
 }
-
-h1 { margin-bottom: 5px; }
-p { font-size: 14px; opacity: 0.8; }
-
+h1 { margin-bottom:5px; }
+p { font-size:14px; opacity:0.8; }
 a {
-  display: block;
-  margin: 12px 0;
-  padding: 12px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: white;
-  background: #111;
-  transition: 0.3s;
+  display:block;
+  margin:12px 0;
+  padding:12px;
+  border-radius:12px;
+  text-decoration:none;
+  color:white;
+  background:#111;
+  transition:0.3s;
 }
 a:hover {
-  background: #5865F2;
-  box-shadow: 0 0 15px #5865F2;
-  transform: scale(1.05);
+  background:#5865F2;
+  box-shadow:0 0 15px #5865F2;
+  transform:scale(1.05);
 }
-
 button {
-  margin-top: 12px;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: #5865F2;
-  color: white;
-  cursor: pointer;
+  margin-top:12px;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  background-color:#5865F2;
+  color:white;
+  cursor:pointer;
 }
-button:hover {
-  background-color: #4752C4;
-}
+button:hover { background-color:#4752C4; }
 </style>
 </head>
 <body>
@@ -81,13 +73,22 @@ button:hover {
   <a href="https://www.roblox.com/users/4886061050/profile" target="_blank">🎮 Roblox</a>
   <a href="https://www.tiktok.com/@skzaccounttxo?_r=1&_t=ZN-94p9yb8re34" target="_blank">🎵 TikTok</a>
 
-  <!-- Music -->
-  <audio id="music" loop>
-    <source src="https://store-eu-par-4.gofile.io/download/web/de5fdfde-78ba-4aa7-b522-dc336a6ddcaf/I.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <button onclick="document.getElementById('music').play()">▶ Play Music</button>
+  <!-- Play Music Button -->
+  <button id="play-btn">▶ Play Music</button>
+
+  <!-- Hidden YouTube Music -->
+  <iframe id="yt-music" style="display:none;" width="0" height="0"
+    src="https://www.youtube.com/embed/n5B5q1Hwt_U?autoplay=1&loop=1&playlist=n5B5q1Hwt_U"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
+
+<script>
+// Play music & hide button
+document.getElementById('play-btn').addEventListener('click', function() {
+  document.getElementById('yt-music').style.display = 'block';
+  this.style.display = 'none';
+});
+</script>
 
 </body>
 </html>
