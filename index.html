@@ -16,7 +16,6 @@ body {
   justify-content: center;
 }
 
-/* Dark overlay */
 body::before {
   content: "";
   position: absolute;
@@ -27,7 +26,6 @@ body::before {
   left: 0;
 }
 
-/* Card */
 .card {
   position: relative;
   background: rgba(20,20,20,0.85);
@@ -40,14 +38,8 @@ body::before {
   box-shadow: 0 0 25px rgba(0,0,0,0.5);
 }
 
-h1 {
-  margin-bottom: 5px;
-}
-
-p {
-  font-size: 14px;
-  opacity: 0.8;
-}
+h1 { margin-bottom: 5px; }
+p { font-size: 14px; opacity: 0.8; }
 
 a {
   display: block;
@@ -59,16 +51,26 @@ a {
   background: #111;
   transition: 0.3s;
 }
-
 a:hover {
   background: #5865F2;
   box-shadow: 0 0 15px #5865F2;
   transform: scale(1.05);
 }
+
+button {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #5865F2;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #4752C4;
+}
 </style>
-
 </head>
-
 <body>
 
 <div class="card">
@@ -79,11 +81,12 @@ a:hover {
   <a href="https://www.roblox.com/users/4886061050/profile" target="_blank">🎮 Roblox</a>
   <a href="https://www.tiktok.com/@skzaccounttxo?_r=1&_t=ZN-94p9yb8re34" target="_blank">🎵 TikTok</a>
 
-  <!-- Background Music -->
-  <audio id="music" controls autoplay loop>
+  <!-- Music -->
+  <audio id="music" loop>
     <source src="https://srv-file7.gofile.io/download/GqyM0t" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  <button onclick="document.getElementById('music').play()">▶ Play Music</button>
 </div>
 
 </body>
