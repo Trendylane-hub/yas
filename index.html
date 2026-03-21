@@ -75,13 +75,35 @@ button:hover { background-color:#4752C4; }
 
   <!-- Music -->
   <audio id="music" loop>
-    <source src="https://store-eu-par-4.gofile.io/download/web/de5fdfde-78ba-4aa7-b522-dc336a6ddcaf/I.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Play Button -->
-  <button onclick="document.getElementById('music').play(); this.style.display='none';">▶ Play Music</button>
+  <!-- Button -->
+  <button id="musicBtn">▶ Play Music</button>
 </div>
+
+<script>
+const music = document.getElementById("music");
+const btn = document.getElementById("musicBtn");
+
+let isPlaying = false;
+music.volume = 0.5;
+
+btn.addEventListener("click", () => {
+  if (!isPlaying) {
+    music.play().then(() => {
+      btn.textContent = "⏸ Pause Music";
+      isPlaying = true;
+    }).catch(() => {
+      alert("Music couldn't play. Try a different link!");
+    });
+  } else {
+    music.pause();
+    btn.textContent = "▶ Play Music";
+    isPlaying = false;
+  }
+});
+</script>
 
 </body>
 </html>
